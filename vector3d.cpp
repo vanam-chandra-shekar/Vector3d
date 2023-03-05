@@ -1,5 +1,4 @@
 #include "vector3d.hpp"
-#include<iostream>
 #include <math.h>
 
 vector3d::vector3d(double X,double Y,double Z)
@@ -19,11 +18,6 @@ vector3d vector3d::cross(const vector3d &b)
     double s2 {((z*b.x)-(x-b.z))};
     double s3 {((z*b.y)-(y-b.x))};
     return vector3d(s1,s2,s3);
-}
-
-void vector3d::display()
-{
-    std::cout<<x<<"i+"<<y<<"j+"<<z<<"k"<<std::endl;
 }
 
 vector3d &vector3d::operator=(const vector3d &rhs)
@@ -72,4 +66,17 @@ vector3d vector3d::normalize() const
         return vector3d(X,Y,Z);
     }
     
+}
+
+vector3d operator-(const vector3d &lhs ,const vector3d &rhs)
+{
+    double X,Y,Z;
+    X= lhs.x-rhs.x; Y=lhs.y-rhs.y ; Z = lhs.z-rhs.z;
+    return vector3d(X,Y,Z);
+}
+
+std::ostream &operator<<(std::ostream &os , const vector3d &out )
+{
+    os<<out.x<<"i+"<<out.y<<"j+"<<out.z<<"k";
+    return os;
 }
