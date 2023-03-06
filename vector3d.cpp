@@ -36,6 +36,11 @@ vector3d operator*(const double &lhs,const vector3d &rhs)
     return vector3d(lhs*rhs.x,lhs*rhs.y,lhs*rhs.z);
 }
 
+vector3d operator*(const vector3d &lhs,const double &rhs)
+{
+    return vector3d(lhs.x*rhs,lhs.y*rhs,lhs.z*rhs);
+}
+
 vector3d vector3d::operator-() const
 {
     return vector3d(-1*x,-1*y,-1*z);

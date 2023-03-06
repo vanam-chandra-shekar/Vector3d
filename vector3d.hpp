@@ -5,6 +5,7 @@
 class vector3d
 {
     friend vector3d operator*(const double &lhs,const vector3d &rhs);
+    friend vector3d operator*(const vector3d &lhs,const vector3d &rhs);
     friend vector3d operator+(const vector3d &lhs,const vector3d &rhs);
     friend vector3d operator-(const vector3d &lhs ,const vector3d &rhs);
     friend std::ostream &operator<<(std::ostream &os , const vector3d &out );
