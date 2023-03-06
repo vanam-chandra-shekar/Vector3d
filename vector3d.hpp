@@ -8,6 +8,7 @@ class vector3d
     friend vector3d operator+(const vector3d &lhs,const vector3d &rhs);
     friend vector3d operator-(const vector3d &lhs ,const vector3d &rhs);
     friend std::ostream &operator<<(std::ostream &os , const vector3d &out );
+    friend std::istream &operator>>(std::ostream &is, vector3d &in);
     public:
         double x , y ,z;
         vector3d(double X=0.0f, double Y=0.0f,double Z=0.0f);

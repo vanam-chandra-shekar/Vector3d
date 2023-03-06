@@ -1,6 +1,7 @@
 #include "vector3d.hpp"
 #include <math.h>
 
+
 vector3d::vector3d(double X,double Y,double Z)
     :x{X},y{Y},z{Z}{}
 
@@ -79,4 +80,9 @@ std::ostream &operator<<(std::ostream &os , const vector3d &out )
 {
     os<<out.x<<"i+"<<out.y<<"j+"<<out.z<<"k";
     return os;
+}
+
+std::istream &operator>>(std::ostream &is, vector3d &in)
+{
+    
 }
